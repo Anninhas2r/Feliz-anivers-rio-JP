@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Formulário Pegadinha - Parte 2</title>
+</head>
+<body>
+    <img class="wave" src="holding-hands-animate.svg">
+    <div class="container">
+        <div class="img"></div>
+        <div class="login-content">
+            <form id="form" onsubmit="return validateForm2()">
+                <p class="question">
+                    <p>Agora, vamos ver se você realmente sabe mais sobre a sua namorada. Responda corretamente:</p>
+
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5>Qual o nome da sua namorada?</h5>
+                            <input type="text" class="input" id="girlfriend-name" name="girlfriend-name" required>
+                        </div>
+                    </div>
+
+                    <div class="input-div">
+                        <div class="i">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div>
+                            <h5>Qual a idade dela?</h5>
+                            <input type="number" class="input" id="girlfriend-age" name="girlfriend-age" required>
+                        </div>
+                    </div>
+
+                    <div class="input-div">
+                        <div class="i">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h5>Qual a data de namoro de vocês?</h5>
+                            <input type="text" class="input" id="relationship-date" name="relationship-date" required>
+                        </div>
+                    </div>
+
+                    <div class="input-div">
+                        <div class="i">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5>Qual apelido ela te chama?</h5>
+                            <input type="text" class="input" id="nickname-you" name="nickname-you" required>
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn" value="Próximo">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função de validação para a página 2
+        function validateForm2() {
+            // Obtém os valores dos campos
+            const girlfriendName = document.getElementById('girlfriend-name').value;
+            const girlfriendAge = document.getElementById('girlfriend-age').value;
+            const relationshipDate = document.getElementById('relationship-date').value;
+            const nicknameYou = document.getElementById('nickname-you').value;
+
+            // Verifica se todos os campos estão preenchidos
+            if (girlfriendName === "" || girlfriendAge === "" || relationshipDate === "" || nicknameYou === "") {
+                alert("Todos os campos devem ser preenchidos!");
+                return false; // Impede o envio do formulário
+            }
+
+            // Se os campos estiverem preenchidos, redireciona para a página da surpresa
+            window.location.href = "surp1-.html"; // Redireciona para a página de surpresa
+            return false; // Previne o envio do formulário (evita o comportamento padrão)
+        }
+    </script>
+</body>
+</html>

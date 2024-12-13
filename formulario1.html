@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Formulário Pegadinha</title>
+</head>
+<body>
+    <img class="wave" src="holding-hands-animate.svg">
+    <div class="container">
+        <div class="img"></div>
+        <div class="login-content">
+            <form id="form" onsubmit="return validateForm()">
+                <p class="question">
+                    <h2>PEGADINHAAA!</h2>
+                    <p>Na verdade, são apenas 2 páginas. Preencha as informações abaixo corretamente:</p>
+
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5>Qual seu nome Completo?</h5>
+                            <input type="text" class="input" id="name" name="name" required>
+                        </div>
+                    </div>
+
+                    <div class="input-div">
+                        <div class="i">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div>
+                            <h5>Qual sua data de Aniversário?</h5>
+                            <input type="text" class="input" id="birthday" name="birthday" required>
+                        </div>
+                    </div>
+
+                    <div class="input-div">
+                        <div class="i">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h5>Qual o apelido de sua namorada?</h5>
+                            <input type="text" class="input" id="nickname" name="nickname" required>
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn" value="Próximo">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função de validação para a página 1
+        function validateForm() {
+            // Obtém os valores dos campos
+            const name = document.getElementById('name').value;
+            const birthday = document.getElementById('birthday').value;
+            const nickname = document.getElementById('nickname').value;
+
+            // Verifica se todos os campos estão preenchidos
+            if (name === "" || birthday === "" || nickname === "") {
+                alert("Todos os campos devem ser preenchidos!");
+                return false; // Impede o envio do formulário
+            }
+
+            // Se os campos estiverem preenchidos, redireciona para a próxima página
+            window.location.href = 'formulario2.html'; // Redireciona para a Página 2
+            return false; // Previne o envio do formulário (evita o comportamento padrão)
+        }
+    </script>
+</body>
+</html>

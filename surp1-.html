@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" href="/img/icon.svg"/>
+	<title>Surpresa para você</title>
+	<link rel="stylesheet" type="text/css" href="surpresaa.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<div class="img">
+			<!-- Pode adicionar alguma imagem aqui se quiser -->
+		</div>
+		<div class="login-content">
+			<form id="surprise-form">
+				<h2>Quer ver a surpresa?</h2>
+				
+				<div class="input-div one">
+					<input type="button" class="btn" value="Sim" onclick="showSurprise()">
+				</div>
+				<div class="input-div pass">
+					<input type="button" class="btn" value="Não" onclick="showSadMessage()">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		// Função para avançar para a surpresa
+		function showSurprise() {
+			window.location.href = "surpresa2.html";  // Redireciona para a página 2 de surpresa
+		}
+		
+		// Função para mostrar uma mensagem triste
+		function showSadMessage() {
+			document.querySelector('.login-content').innerHTML = `
+				<h2 class="title">Oh, que pena...</h2>
+				<p>Você não quer ver a surpresa. Eu fico triste, mas tudo bem!</p>
+				<a href="index.html">Voltar</a>
+			`;
+		}
+	</script>
+</body>
+</html>

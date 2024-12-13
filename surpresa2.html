@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="icon" type="image/png" href="/img/icon.svg"/>
+	<title>Surpresa Especial</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			font-family: 'Poppins', sans-serif;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+		}
+
+		.container {
+			background: #fff;
+			border-radius: 15px;
+			box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+			padding: 30px;
+			text-align: center;
+			width: 90%;
+			max-width: 400px;
+		}
+
+		.container h2 {
+			font-size: 1.8em;
+			margin-bottom: 20px;
+			color: #333;
+		}
+
+		.container p {
+			font-size: 1em;
+			color: #555;
+			margin-bottom: 20px;
+		}
+
+		.container .btn {
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 1em;
+			color: #fff;
+			background: #ff6b6b;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+
+		.container .btn:hover {
+			background: #ee5253;
+		}
+
+		.foto-casal {
+			max-width: 100%;
+			border-radius: 10px;
+			margin-bottom: 20px;
+		}
+
+		.carta a {
+			display: inline-block;
+			margin-top: 20px;
+			padding: 10px 30px;
+			font-size: 1em;
+			color: #fff;
+			text-decoration: none;
+			background: #ff6b6b;
+			border-radius: 8px;
+			transition: background 0.3s ease;
+		}
+
+		.carta a:hover {
+			background: #ee5253;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="img">
+			<img src="eu_vc_ja.jpeg" alt="Nossa Foto" class="foto-casal">
+		</div>
+		<div class="login-content">
+			<h2>SURPRESAAA!</h2>
+			<p>Essa é uma surpresa especial só para você, porque você é incrível e ao clicar no botão abaixo, você poderá ler a carta que escrevi com todo meu carinho. Espero que você goste! 😘</p>
+			<div class="input-div one">
+				<input type="button" class="btn" value="Abrir Carta" onclick="openLetter()">
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function openLetter() {
+			const carta = ` 
+				<div class="carta">
+					<h3>Meu nenem</h3>
+					<p>Feliz aniversário, meu neném! 💖 Hoje é o dia de celebrar você, a pessoa mais incrível e maravilhosa que já entrou na minha vida. Não consigo nem expressar o quanto sou grata por te ter ao meu lado. Desde o momento que nos conhecemos, minha vida ficou muito mais colorida, alegre e cheia de amor. Você me faz sentir uma felicidade indescritível, e é com você que eu quero compartilhar todos os meus momentos, tanto os bons quanto os difíceis.</p>
+					<p>Você é muito mais do que meu namorado, você é meu companheiro, meu melhor amigo, o meu porto seguro. Não importa o que aconteça, sei que posso contar com você para me apoiar, me fazer sorrir e, acima de tudo, me amar de uma maneira tão genuína e intensa. Cada dia ao seu lado é uma bênção, e eu sou grata por cada risada, cada abraço apertado, cada olhar cheio de carinho. Você é minha razão de ser mais feliz e de acreditar que o amor é o melhor presente que a vida pode nos dar.</p>
+					<p>Neste seu dia especial, desejo que tudo o que você mais sonha se realize. Que você tenha um ano repleto de saúde, conquistas e momentos incríveis. Eu estarei ao seu lado para te apoiar em cada passo, celebrando suas vitórias e, principalmente, fazendo de tudo para te ver sorrindo, porque isso é o que mais importa para mim: ver você feliz. Te amo mais do que as palavras podem expressar, e sou tão sortuda por te ter como meu neném. Que esse seja apenas mais um dos muitos aniversários que vamos comemorar juntos, sempre com muito amor, risadas e, claro, muito carinho. 😘💕</p>
+					<a href="index.html" class="btn">Voltar</a>
+				</div>
+			`;
+
+			document.querySelector('.login-content').innerHTML = carta;
+		}
+	</script>
+</body>
+</html>

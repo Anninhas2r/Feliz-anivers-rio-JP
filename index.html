@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="/img/icon.svg"/>
+    <title>Formulário de Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+</head>
+<body>
+    <img class="wave" src="love.svg">
+    <div class="container">
+        <div class="img"></div>
+        <div class="login-content">
+            <form id="login-form">
+                <h2 class="title">Bem-Vindo meu Nenem</h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Usuário</h5>
+                        <input type="text" id="login-usuario" class="input" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Senha</h5>
+                        <input type="password" id="login-senha" class="input" required>
+                    </div>
+                </div>
+                <input type="submit" class="btn" value="Login">
+                <button type="button" class="btn" id="dicas.html">Dicas</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Usuário e senha fixos para a surpresa
+        const usuarioUnico = "AJ";
+        const senhaUnica = "24082019";
+
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const loginUsuario = document.getElementById("login-usuario").value;
+            const loginSenha = document.getElementById("login-senha").value;
+
+            if (loginUsuario === usuarioUnico && loginSenha === senhaUnica) {
+                alert("Login bem-sucedido! Parabéns, você conseguiu!");
+                window.location.href = "perg1.html"; // Redireciona para a página principal
+            } else {
+                alert("Usuário ou senha incorretos! Tente novamente.");
+            }
+        });
+
+        // Redirecionar para a página de dicas
+        document.getElementById("dicas.html").addEventListener("click", function() {
+            window.location.href = "dicas.html"; // Redireciona para a página de dicas
+        });
+    </script>
+</body>
+</html>
